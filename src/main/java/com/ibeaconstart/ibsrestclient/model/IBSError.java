@@ -21,6 +21,18 @@ public class IBSError {
         this.serverReason = serverReason;
     }
 
+    public IBSErrorType getErrorType() {
+        return errorType;
+    }
+
+    public IBSServerReason getServerReason() {
+        return serverReason;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
     @Override
     public String toString() {
         return "IBSError{" +

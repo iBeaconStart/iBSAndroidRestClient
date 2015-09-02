@@ -32,7 +32,7 @@ public class IBSAction {
 
     @Expose
     @SerializedName("Content")
-    private String content;
+    private IBSContent content;
 
     @Expose
     @SerializedName("BeaconId")
@@ -45,6 +45,20 @@ public class IBSAction {
     @Expose
     @SerializedName("Minor")
     private String minor;
+
+    @Expose
+    @SerializedName("BeaconName")
+    private String beaconName;
+
+    @Expose
+    @SerializedName("BeaconDescription")
+    private String beaconDescription;
+
+    @Expose
+    @SerializedName("Color")
+    private String color;
+
+
 
     @Override
     public String toString() {

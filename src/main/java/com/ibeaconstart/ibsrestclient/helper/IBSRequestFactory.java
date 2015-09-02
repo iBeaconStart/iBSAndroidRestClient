@@ -3,6 +3,7 @@ package com.ibeaconstart.ibsrestclient.helper;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.ibeaconstart.ibsrestclient.IBSConfig;
+import com.ibeaconstart.ibsrestclient.model.IBSContent;
 import com.ibeaconstart.ibsrestclient.requests.IBSCampaignsRequest;
 import com.ibeaconstart.ibsrestclient.responses.IBSCampaignsResponse;
 import com.ibeaconstart.ibsrestclient.responses.IBSCampainsResponseDeserializer;
@@ -25,6 +26,7 @@ public class IBSRequestFactory {
 
         gson = new GsonBuilder()
                 .registerTypeAdapter(IBSCampaignsResponse.class, new IBSCampainsResponseDeserializer())
+                .registerTypeAdapter(IBSContent.class, new IBSContentDeserializer())
                 .excludeFieldsWithoutExposeAnnotation()
                 .create();
 
